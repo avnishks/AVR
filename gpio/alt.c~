@@ -1,0 +1,17 @@
+#include<avr/io.h>
+#include<util/delay.h>
+int main(void)
+{
+     DDRC = 0xff; // as o/p port
+     PORTC =0xaa; // leds are off
+     while(1)
+     { 
+        PORTC = 0x00; //glow leds
+        _delay_ms(1000);
+        PORTC = 0XFF; //LEDS OFF
+        _delay_ms(1000);
+
+        }
+}
+
+
